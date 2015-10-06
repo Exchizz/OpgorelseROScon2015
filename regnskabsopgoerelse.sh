@@ -10,8 +10,12 @@ morten_lagtud=`echo 0.5*$lejlighed+0.5*$taxi+$ROSconMathias|bc`
 echo "Morten: $morten_lagtud DKK"
 
 
-tog=`echo 116.00*$EUR2DKK|bc` #taget fra billeten du kan bare indtaste hvad der nu er blevet hævet
-mathias_lagtud=`echo 0.5*$tog|bc`
+tog=`echo 874.51|bc` #taget fra billeten du kan bare indtaste hvad der nu er blevet hævet
+
+#Nutella + brød + dr. peper*2 + wurst + pasta + tomatsnask = 2 + 1.39 + 3.79 + 3.19 + 1.38 + 2.65 = 14.4 EUR
+indkoeb=`echo 14.4|bc` #EUR
+piratebus=`echo 441.91|bc` #DKR
+mathias_lagtud=`echo 0.5*$tog+0.5*$piratebus+0.5*$indkoeb*$EUR2DKK|bc`
 echo "Mathias: $mathias_lagtud DKK"
 
 
